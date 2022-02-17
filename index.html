@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <script src="https://unpkg.com/moralis/dist/moralis.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <link href="https://unpkg.com/nes.css/css/nes.css" rel="stylesheet" />
+
+    <title>NES Fan Uploader</title>
+
+    <style>
+        html, body, pre, code, kbd, samp {
+            font-family: "Press Start 2P";
+        }
+        body{
+            margin: 20px;
+            padding: 0px;
+            background-image: url("granite.jpg");
+            background-position: center;
+        }
+      </style>
+
+</head>
+<body>
+    <!-- Navigation Menu -->
+    <div class="nes-container is-dark with-title is-centered">
+        
+        <p class="title">NFU Wallet Connect</p>
+        <p>Please connect metamask wallet to begin uploading. </p>
+        <button type="button" class="nes-btn is-primary" id="btn-login">Connect</button>
+        <button type="button" class="nes-btn is-warning" onclick="document.getElementById('dialog-dark-rounded').showModal();">
+            About NFU
+            </button>
+            <dialog class="nes-dialog is-rounded is-dark" id="dialog-dark-rounded">
+            <form method="dialog">
+                <i class="nes-mario"></i>
+                <br>
+                <br>
+                <p class="title">Nintendo NES Fanatic Uploader</p>
+                <p>Are you a Nintendo NES fan who just can't resist playing this phenominal gaming system?</p>
+                <p>Upload your photos today! We would love to see them.</p>
+
+                <p class="nes-text is-error">Must connect to wallet to use dApp</p>
+                <menu class="dialog-menu">
+                <button class="nes-btn is-success">Yay!</button>
+                </menu>
+            </form>
+            </dialog>
+    </div>
+
+    <br>
+    <br>
+
+    <!-- Main -->
+    <h2>Nintendo NES Fanatic Uploader</h2>
+    <div style="padding: 1rem;" class="nes-field is-inline" name="metadataName">
+        <input type="text" name="metadataName" id="name_field" class="nes-input" placeholder="Enter File Name">
+    </div>
+    <br>
+    <div class="container">
+        <textarea id="textarea_field" class="nes-textarea" placeholder="Enter Description" id="metadataDescription"></textarea>
+        <br>
+        <br>
+        <label class="nes-btn is-primary">
+            <span>Select your file</span>
+            <input type="file" id="fileInput">
+        </label>
+    </div>
+    <br>
+    <button type="button" class="nes-btn is-success" id="upload" onclick=uploading()>Upload File</button>
+    <br>
+    <br>
+   
+    <div class="nes-container with-title is-centered is-dark">
+        <p class="title">Connect on Social Media</p>
+        <i class="nes-icon github is-large"></a></i>
+        <i class="nes-icon instagram is-large"></i>
+        <i class="nes-icon twitter is-large"></i>
+        <i class="nes-icon linkedin is-large"></i>
+    </div>
+
+
+
+    <script type="text/javascript" src="js/main.js"></script>
+    
+    
+</body>
+</html>
